@@ -23,8 +23,10 @@ export const Navbar: React.FC = () => {
                                 value={todoName}
                                 onChange={(e) => { setTodoName(e.target.value) }} />
                         </label>
-                        <button className='uk-button-small' uk-icon='icon: plus; ratio: 1.2'
-                            onClick={() => { addTodo(todoName) }}></button>
+                        <span style={{
+                            cursor: 'pointer'
+                        }} uk-icon='icon: plus; ratio: 1.2'
+                            onClick={() => addTodo(todoName) }></span>
                     </form>
                 </div>
             </nav>

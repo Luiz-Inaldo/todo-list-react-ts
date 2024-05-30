@@ -11,10 +11,7 @@ export const TodoContext = createContext<ContextType>({
 
 export const TodoProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
-    const [todos, setTodos] = useState<TodoProps[]>([
-        {id: 1, title: "Fazer café", done: false},
-        {id: 2, title: "Comear algo", done: false}
-    ]);
+    const [todos, setTodos] = useState<TodoProps[]>(getTodos);
 
     useEffect(() => {
         saveTodo(todos);
