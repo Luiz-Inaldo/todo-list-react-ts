@@ -5,7 +5,7 @@ import { TodoContext } from '../../context/todoContext';
 
 export const TodoList: React.FC = () => {
 
-  const {todos} = useContext<ContextType>(TodoContext)
+  const { todos } = useContext<ContextType>(TodoContext);
 
   return (
     <div>
@@ -20,7 +20,7 @@ export const TodoList: React.FC = () => {
         </thead>
         <tbody>
           {todos.map(todo => (
-            <Todo key={todo.id} {...todo}/>
+            <Todo key={todo.id} {...todo} />
           ))}
         </tbody>
       </table>
